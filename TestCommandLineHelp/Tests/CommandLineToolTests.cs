@@ -101,7 +101,7 @@ namespace TestCommandLineHelper
         }
 
         [TestMethod]
-        public void ToolNegativeNegativeParseArgumentsTest()
+        public void ToolNegativeParseArgumentsTest()
         {
             var tool = new GetAcls();
 

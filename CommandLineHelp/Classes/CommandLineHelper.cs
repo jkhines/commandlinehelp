@@ -64,7 +64,7 @@ namespace CommandLineHelp
 
             // ensure destination directory for log file exists
             string logFilePath = _tool.GetLogFilePath();
-            if (logFilePath.Length != 0)
+            if (!String.IsNullOrEmpty(logFilePath))
             {
                 if (!Directory.Exists(Path.GetDirectoryName(logFilePath)))
                     throw new ArgumentException(
