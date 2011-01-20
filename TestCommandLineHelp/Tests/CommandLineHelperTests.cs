@@ -56,7 +56,16 @@ namespace TestCommandLineHelper
             };
             // ReSharper restore RedundantExplicitArrayCreation
 
+            // positive test
             helper.Setup(args);
+
+            // negative test
+            try
+            {
+                helper.Setup(null);
+                Assert.Fail("Null arguments should not be allowed.");
+            }
+            catch (Exception) { }
         }
 
         [TestMethod]
